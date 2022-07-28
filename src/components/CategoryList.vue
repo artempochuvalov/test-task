@@ -8,72 +8,15 @@
 
 <script>
 import Category from './Category.vue'
+import {mapState} from 'vuex'
 
 export default {
   components: { Category },
     name: 'category-list',
-    data() {
-        return {
-            categories: [
-                {
-                    categoryName: 'Lorem',
-                    cards: [
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                    ]
-                },
-                {
-                    categoryName: 'Lorem',
-                    cards: [
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                    ]
-                },
-                {
-                    categoryName: 'Lorem',
-                    cards: [
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                        {header: 'Lorem', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas.', imageSrc: '/images/iphone.jpg'},
-                    ]
-                }
-            ]
-        }
+    computed: {
+        ...mapState({
+            categories: state => state.categories,
+        })
     }
 }
 </script>

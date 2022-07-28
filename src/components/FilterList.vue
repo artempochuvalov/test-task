@@ -8,21 +8,21 @@
 
 <script>
 import Filter from './Filter.vue'
+import {mapState} from 'vuex'
 
 export default {
     components: { Filter },
     name: 'filter-list',
     data() {
         return {
-            filters: [
-                {text: 'Подборки', imageSrc: '/icons/grid.svg'},
-                {text: 'Подборки', imageSrc: '/icons/grid.svg'},
-                {text: 'Подборки', imageSrc: '/icons/grid.svg'},
-                {text: 'Подборки', imageSrc: '/icons/grid.svg'},
-            ],
             latestTopScroll: 0,
             show: true,
         }
+    },
+    computed: {
+        ...mapState({
+            filters: state => state.filters,
+        })
     },
     methods: {
         handleScroll() {
